@@ -1,0 +1,49 @@
+.logout-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.logout-container h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #333;
+}
+
+.logout-container button.logout-btn {
+    padding: 12px;
+    background-color: #0077ff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.logout-container button.logout-btn:hover {
+    background-color: #005fcc;
+}
+
+.logout-container .success-msg {
+    color: #4caf50;
+    background-color: #e8f5e9;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.logout-container .error-msg {
+    color: #d8000c;
+    background-color: #ffdddd;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 16px;
+    text-align: center;
+}

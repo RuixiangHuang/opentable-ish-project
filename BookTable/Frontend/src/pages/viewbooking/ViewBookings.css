@@ -1,0 +1,194 @@
+.view-bookings-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-title {
+    color: #2d333f;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.refresh-btn {
+    display: block;
+    margin: 0 auto 2rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.refresh-btn:hover:not(:disabled) {
+    background-color: #45a049;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.refresh-btn:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.error-message {
+    background-color: #fde8e8;
+    color: #e74c3c;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.loading-message, .no-bookings {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.bookings-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.booking-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e0e0;
+    transition: all 0.2s ease;
+}
+
+.booking-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.booking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.restaurant-name {
+    margin: 0;
+    color: #2d333f;
+    font-size: 1.4rem;
+}
+
+.status-badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-badge.pending {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.status-badge.arrived {
+    background-color: #e8f5e9;
+    color: #388e3c;
+}
+
+.booking-details {
+    margin-bottom: 1.5rem;
+}
+
+.detail-row {
+    display: flex;
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+.detail-label {
+    font-weight: 600;
+    min-width: 120px;
+    color: #555;
+}
+
+.booking-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cancel-btn {
+    padding: 0.6rem 1.2rem;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cancel-btn:hover:not(:disabled) {
+    background-color: #c0392b;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.cancel-btn:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .view-bookings-container {
+        padding: 1.5rem;
+    }
+    
+    .detail-row {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    
+    .detail-label {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .view-bookings-container {
+        padding: 1rem;
+    }
+    
+    .page-title {
+        font-size: 1.6rem;
+    }
+    
+    .restaurant-name {
+        font-size: 1.2rem;
+    }
+    
+    .booking-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .booking-actions {
+        justify-content: center;
+    }
+    
+    .cancel-btn {
+        width: 100%;
+    }
+}

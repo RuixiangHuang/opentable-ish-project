@@ -1,0 +1,61 @@
+spring:
+  application:
+    name: BookTable-Backend
+  datasource:
+    url: jdbc:postgresql://database-202.cry282ck8zvl.us-east-2.rds.amazonaws.com:5432/postgres
+    username: postgres
+    password: sgk3yOgn8dcdEM0ytKzs
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: booktableservice@gmail.com
+    password: axyuvvxhfodiuqys
+    protocol: smtp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  data:
+    redis:
+      host: 74.207.241.208
+      port: 6379
+      password: 5f6e7d8c9b0a1b2c3d4e5f6071827364
+      timeout: 5000
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+sa-token:
+  # token name
+  token-name: satoken
+  # token lifetime
+  timeout: 2592000
+  # token timeout, -1 = forever
+  active-timeout: -1
+  is-concurrent: false
+  is-share: false
+  # token style（uuid、simple-uuid、random-32、random-64、random-128、tik）
+  token-style: jwt
+  is-log: true
+  jwt-secret-key: dwadadgesnkjnda7*wdajiwodap
+
+google:
+  api:
+    key: "AIzaSyAPURxk0nGJf_OTdrx-EpgcJDRcmbb9VV4"
+
+# application.yml
+aws:
+  s3:
+    bucket-name: cmpebucket
+    region: us-east-2
+  credentials:
+    access-key: AKIA4SZHN66LPMYSCOVX
+    secret-key: 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

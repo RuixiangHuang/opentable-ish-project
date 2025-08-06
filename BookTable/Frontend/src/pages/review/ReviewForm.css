@@ -1,0 +1,65 @@
+.review-form-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    font-family: sans-serif;
+  }
+  
+  .review-form-container h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .review-form-container .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .review-form-container label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  
+  .review-form-container select,
+  .review-form-container textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .review-form-container textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .review-form-container button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: #00bcd4;  /* Cyan color */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .review-form-container button:hover {
+    background-color: #0097a7;  /* Darker cyan shade for hover */
+  }
+  
+  
+  .review-success {
+    color: green;
+    text-align: center;
+    font-weight: 600;
+  }
+  

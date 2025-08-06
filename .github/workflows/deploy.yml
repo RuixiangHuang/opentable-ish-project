@@ -1,0 +1,43 @@
+name: Spring Boot CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Pull latest code
+        run: |
+          echo "📥 Pulling latest code from Git..."
+          cd /home/ubuntu/BookTable/team-project-20202-teamteam
+          git pull
+
+      - name: Build Backend project
+        run: |
+          echo "🛠 Building Spring Boot backend..."
+          cd /home/ubuntu/BookTable/team-project-20202-teamteam/BookTable/Backend
+          mvn clean
+          mvn package -DskipTests
+
+      - name: Deploy Spring Boot jar
+        run: |
+          sudo bash -x /home/ubuntu/BookTable/start-app.sh
+          echo "⏳ Waiting for app to start..."
+          for i in {1..10}; do
+            sleep 5
+            if curl -s http://localhost:8080/auth/ping; then
+              echo "✅ Spring Boot app started successfully."
+              break
+            elif [ $i -eq 10 ]; then
+              echo "❌ Spring Boot app failed to respond to /auth/ping"
+              tail -n 50 ~/booktable.log
+              exit 1
+            else
+              echo "⏱ Waiting... ($i)"
+            fi
+          done

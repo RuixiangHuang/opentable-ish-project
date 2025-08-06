@@ -1,0 +1,99 @@
+/* Updated SignUp.css */
+.signup-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.signup-container h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.signup-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-container label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+.signup-container input,
+.signup-container select {
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.signup-container input:focus,
+.signup-container select:focus {
+  border-color: #0077ff;
+  outline: none;
+}
+
+.signup-container button {
+  padding: 12px;
+  background-color: #0077ff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signup-container button:hover {
+  background-color: #005fcc;
+}
+
+.signup-container .verification-section {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.signup-container .verification-section input {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.signup-container .verification-section button {
+  padding: 10px 12px;
+  white-space: nowrap;
+  font-size: 14px;
+  background-color: #28a745;
+}
+
+.signup-container .verification-section button:hover {
+  background-color: #218838;
+}
+
+.signup-container .error-msg,
+.signup-container .success-msg {
+  margin-top: 16px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.signup-container .error-msg {
+  color: #d8000c;
+  background-color: #ffdddd;
+}
+
+.signup-container .success-msg {
+  color: #4caf50;
+  background-color: #e8f5e9;
+}
