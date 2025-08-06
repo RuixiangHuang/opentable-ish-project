@@ -4,7 +4,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
-    password: YOUR_PASSWORD
+    password: ${DB_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
@@ -14,8 +14,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: yourservice@gmail.com
-    password: YOUR_PASSWORD
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
     protocol: smtp
     properties:
       mail:
@@ -25,37 +25,33 @@ spring:
             enable: true
   data:
     redis:
-      host: YOUR_REDIS_IP
+      host: ${REDIS_HOST}
       port: 6379
-      password: YOUR_PASSWORD
+      password: ${REDIS_PASSWORD}
       timeout: 5000
   servlet:
     multipart:
       max-file-size: 20MB
       max-request-size: 20MB
+
 sa-token:
-  # token name
   token-name: satoken
-  # token lifetime
   timeout: 2592000
-  # token timeout, -1 = forever
   active-timeout: -1
   is-concurrent: false
   is-share: false
-  # token style（uuid、simple-uuid、random-32、random-64、random-128、tik）
   token-style: jwt
   is-log: true
-  jwt-secret-key: YOUR_PASSWORD
+  jwt-secret-key: ${JWT_SECRET_KEY}
 
 google:
   api:
-    key: "YOUR_PASSWORD"
+    key: ${GOOGLE_API_KEY}
 
-# application.yml
 aws:
   s3:
-    bucket-name: BUCKET_NAME
-    region: BUCKET_REGION
+    bucket-name: ${AWS_BUCKET_NAME}
+    region: ${AWS_REGION}
   credentials:
-    access-key: YOUR_PASSWORD
-    secret-key: YOUR_PASSWORD
+    access-key: ${AWS_ACCESS_KEY}
+    secret-key: ${AWS_SECRET_KEY}
