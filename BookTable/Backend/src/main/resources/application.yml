@@ -2,9 +2,9 @@ spring:
   application:
     name: BookTable-Backend
   datasource:
-    url: jdbc:postgresql://database-202.cry282ck8zvl.us-east-2.rds.amazonaws.com:5432/postgres
+    url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
-    password: sgk3yOgn8dcdEM0ytKzs
+    password: YOUR_PASSWORD
   jpa:
     hibernate:
       ddl-auto: update
@@ -14,8 +14,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: booktableservice@gmail.com
-    password: axyuvvxhfodiuqys
+    username: yourservice@gmail.com
+    password: YOUR_PASSWORD
     protocol: smtp
     properties:
       mail:
@@ -25,9 +25,9 @@ spring:
             enable: true
   data:
     redis:
-      host: 74.207.241.208
+      host: YOUR_REDIS_IP
       port: 6379
-      password: 5f6e7d8c9b0a1b2c3d4e5f6071827364
+      password: YOUR_PASSWORD
       timeout: 5000
   servlet:
     multipart:
@@ -45,17 +45,17 @@ sa-token:
   # token style（uuid、simple-uuid、random-32、random-64、random-128、tik）
   token-style: jwt
   is-log: true
-  jwt-secret-key: dwadadgesnkjnda7*wdajiwodap
+  jwt-secret-key: YOUR_PASSWORD
 
 google:
   api:
-    key: "AIzaSyAPURxk0nGJf_OTdrx-EpgcJDRcmbb9VV4"
+    key: "YOUR_PASSWORD"
 
 # application.yml
 aws:
   s3:
-    bucket-name: cmpebucket
-    region: us-east-2
+    bucket-name: BUCKET_NAME
+    region: BUCKET_REGION
   credentials:
-    access-key: AKIA4SZHN66LPMYSCOVX
-    secret-key: 6YkaHeavizdLJP46H7bXNYVNeIw86lU22Y9i/ix6
+    access-key: YOUR_PASSWORD
+    secret-key: YOUR_PASSWORD
